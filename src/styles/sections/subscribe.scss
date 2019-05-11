@@ -1,0 +1,34 @@
+.subscribe {
+    display: flex;
+    height: 650px;
+    margin-bottom: 133px;
+
+    &__right {
+        flex-basis: 50%;
+        background-image: url('../images/two-guys.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &__left {
+        position: relative;
+        flex-basis: 50%;
+        background-color: #ffddd5;
+    }
+
+    &__text {
+        @include center-y;
+        width: 31.313rem;
+        right: 200px;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #000000;
+        line-height: 3rem;
+    }
+
+    &__author {
+        display: block;
+        font-weight: 300;
+        margin-top: 100px;
+    }
+}
