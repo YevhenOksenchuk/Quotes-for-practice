@@ -1,0 +1,24 @@
+.hands {
+    height: 660px;
+    padding-top: 204px;
+    margin-bottom: 103px;
+    background-image: url('../images/hands.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    &__title {
+        width: 51rem;
+        height: 18.125rem;
+        font-size: 3.75rem;
+        font-weight: 700;
+        margin: 0 auto;
+        color: #ffffff;
+    }
+
+    &__text {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #ffffff;
+    }
+}
