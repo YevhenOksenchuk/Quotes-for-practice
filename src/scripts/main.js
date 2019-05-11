@@ -1,1 +1,1 @@
-//= js/script.js
+//= js/hiddenMenu.js
