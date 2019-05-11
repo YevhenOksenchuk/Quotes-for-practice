@@ -26,8 +26,8 @@ gulp.task('server', function () {
 //----------SASS------------
 gulp.task('styles:compile', function () {
     return gulp.src('src/styles/main.scss')
-        .pipe(sass({
-            includePaths: require('node-normalize-scss').with('other/path', 'another/path'),
+        .pipe(sass({/* 
+            includePaths: require('node-normalize-scss').with('other/path', 'another/path'), */
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(sourcemaps.init())

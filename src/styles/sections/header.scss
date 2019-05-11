@@ -1,0 +1,73 @@
+.header {
+    height: 1000px;
+    background-image: url(../images/header-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__container {
+    }
+
+    &__logo {
+        float: left;
+        position: relative;
+        font-family: Montserrat;
+        font-size: 1.875rem;
+        font-weight: 700;
+        width: 200px;
+        height: 80px;
+        margin-top: 50px;
+        margin-left: 80px;
+        letter-spacing: 6px;
+        color: #ffffff;
+        background-color: #000000;
+        text-transform: uppercase;
+
+        &-text {
+            @include center-xy;
+        }
+    }
+
+    &__menu {
+        float: right;
+        font-family: Montserrat;
+        font-size: 0.938rem;
+        font-weight: 700;
+        margin-top: 70px;
+        margin-right: 80px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.094rem;
+        border-top: 3px solid #ffffff;
+        border-bottom: 3px solid #ffffff;
+        cursor: pointer;
+    }
+
+    &__container--position {
+        position: relative;
+    }
+
+    &__description {
+        position: absolute;
+        right: 60px;
+        top: 200px;
+    }
+
+    &__title {
+        font-family: "Raleway - Thin";
+        font-size: 13.75rem;
+        font-weight: 400;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 1.25rem;
+
+        &-description {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-left: 15px;
+            color: #ffffff;
+            letter-spacing: 0.364rem;
+        }
+    }
+}

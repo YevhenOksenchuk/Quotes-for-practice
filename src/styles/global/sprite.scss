@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$email-name: 'email';
+$email-x: 47px;
+$email-y: 18px;
+$email-offset-x: -47px;
+$email-offset-y: -18px;
+$email-width: 23px;
+$email-height: 17px;
+$email-total-width: 81px;
+$email-total-height: 64px;
+$email-image: '../images/sprite.png';
+$email: (47px, 18px, -47px, -18px, 23px, 17px, 81px, 64px, '../images/sprite.png', 'email', );
+$facebook-name: 'facebook';
+$facebook-x: 70px;
+$facebook-y: 0px;
+$facebook-offset-x: -70px;
+$facebook-offset-y: 0px;
+$facebook-width: 11px;
+$facebook-height: 23px;
+$facebook-total-width: 81px;
+$facebook-total-height: 64px;
+$facebook-image: '../images/sprite.png';
+$facebook: (70px, 0px, -70px, 0px, 11px, 23px, 81px, 64px, '../images/sprite.png', 'facebook', );
+$google-name: 'google';
+$google-x: 0px;
+$google-y: 24px;
+$google-offset-x: 0px;
+$google-offset-y: -24px;
+$google-width: 28px;
+$google-height: 17px;
+$google-total-width: 81px;
+$google-total-height: 64px;
+$google-image: '../images/sprite.png';
+$google: (0px, 24px, 0px, -24px, 28px, 17px, 81px, 64px, '../images/sprite.png', 'google', );
+$in-name: 'in';
+$in-x: 24px;
+$in-y: 0px;
+$in-offset-x: -24px;
+$in-offset-y: 0px;
+$in-width: 23px;
+$in-height: 21px;
+$in-total-width: 81px;
+$in-total-height: 64px;
+$in-image: '../images/sprite.png';
+$in: (24px, 0px, -24px, 0px, 23px, 21px, 81px, 64px, '../images/sprite.png', 'in', );
+$instagram-name: 'instagram';
+$instagram-x: 0px;
+$instagram-y: 0px;
+$instagram-offset-x: 0px;
+$instagram-offset-y: 0px;
+$instagram-width: 24px;
+$instagram-height: 24px;
+$instagram-total-width: 81px;
+$instagram-total-height: 64px;
+$instagram-image: '../images/sprite.png';
+$instagram: (0px, 0px, 0px, 0px, 24px, 24px, 81px, 64px, '../images/sprite.png', 'instagram', );
+$pinterest-name: 'pinterest';
+$pinterest-x: 0px;
+$pinterest-y: 41px;
+$pinterest-offset-x: 0px;
+$pinterest-offset-y: -41px;
+$pinterest-width: 17px;
+$pinterest-height: 23px;
+$pinterest-total-width: 81px;
+$pinterest-total-height: 64px;
+$pinterest-image: '../images/sprite.png';
+$pinterest: (0px, 41px, 0px, -41px, 17px, 23px, 81px, 64px, '../images/sprite.png', 'pinterest', );
+$twitter-name: 'twitter';
+$twitter-x: 47px;
+$twitter-y: 0px;
+$twitter-offset-x: -47px;
+$twitter-offset-y: 0px;
+$twitter-width: 23px;
+$twitter-height: 18px;
+$twitter-total-width: 81px;
+$twitter-total-height: 64px;
+$twitter-image: '../images/sprite.png';
+$twitter: (47px, 0px, -47px, 0px, 23px, 18px, 81px, 64px, '../images/sprite.png', 'twitter', );
+$youtube-name: 'youtube';
+$youtube-x: 17px;
+$youtube-y: 41px;
+$youtube-offset-x: -17px;
+$youtube-offset-y: -41px;
+$youtube-width: 23px;
+$youtube-height: 16px;
+$youtube-total-width: 81px;
+$youtube-total-height: 64px;
+$youtube-image: '../images/sprite.png';
+$youtube: (17px, 41px, -17px, -41px, 23px, 16px, 81px, 64px, '../images/sprite.png', 'youtube', );
+$spritesheet-width: 81px;
+$spritesheet-height: 64px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($email, $facebook, $google, $in, $instagram, $pinterest, $twitter, $youtube, );
+$spritesheet: (81px, 64px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

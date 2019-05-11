@@ -25,11 +25,11 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YevhenOksenchuk/Veronina.git"
+    "url": "git+https://github.com/YevhenOksenchuk/Quotes-for-practice.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/YevhenOksenchuk/Veronina/issues"
+    "url": "https://github.com/YevhenOksenchuk/Quotes-for-practice/issues"
   },
-  "homepage": "https://github.com/YevhenOksenchuk/Veronina#readme"
+  "homepage": "https://github.com/YevhenOksenchuk/Quotes-for-practice#readme"
 }
