@@ -1,0 +1,42 @@
+.inclusive {
+    text-align: center;
+    margin-bottom: 99px;
+
+    &__title {
+        font-size: 3.75rem;
+        font-weight: 100;
+        margin-bottom: 10px;
+
+        &-description {
+            font-size: 3.75rem;
+            font-weight: 700;
+            margin-bottom: 37px;
+        }
+
+        &-under-description {
+            font-size: 1.25rem;
+            margin: 0 auto;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__line {
+        width: 80px;
+        height: 2px;
+        margin: 0 auto 63px auto;
+        background-color: #000000;
+    }
+
+    &__description {
+        width: 59rem;
+        margin: 0 auto;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #000000;
+        line-height: 1.875rem;
+
+        &--mb {
+            margin-bottom: 30px;
+        }
+    }
+}
